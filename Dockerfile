@@ -17,9 +17,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
-RUN git clone --recursive https://github.com/trianglesplatting/triangle-splatting.git
-
-WORKDIR /app/triangle-splatting
+RUN git clone --recursive https://github.com/mthodoris/my-triangle-splatting.git
+WORKDIR /app/my-triangle-splatting
 
 RUN python3.10 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:${PATH}"
